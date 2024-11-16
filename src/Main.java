@@ -8,7 +8,7 @@ public class Main {
         int clientOS = 0;
         if (clientOS == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } else if (clientOS == 1) {
+        } else {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
 
@@ -29,30 +29,26 @@ public class Main {
 
         //task 3
         int year = 2021;
-        if (year > 1584) {
-            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
-                System.out.println(year + " год является високосным");
-            } else {
-                System.out.println(year + " год не является високосным");
-            }
-        } else {
-            System.out.println("Год не может быть меньше 1584");
+        if ((year > 1584 && year % 4 == 0 && year % 100 != 0) || (year > 1584 && year % 400 == 0)) {
+            System.out.println(year + " год является високосным");
+        } else if ((year > 1584 && year % 4 != 0 && year % 100 == 0) ||(year > 1584 && year % 400 != 0)) {
+            System.out.println(year + " год не является високосным");
         }
-
+        else{
+            System.out.println("Год не может быть меньше 1584.");
+        }
 
 
         //task 4
         int deliveryDistance = 95;
         int deliveryPeriod = 1;
-        if (deliveryDistance <=20) {
-            System.out.println("Потребуется дней: 1");}
-        else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+        if (deliveryDistance <= 20) {
+            System.out.println("Потребуется дней: 1");
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
             System.out.println("Потребуется дней: 2");
-        }
-        else if (deliveryDistance > 60 && deliveryDistance <= 100){
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
             System.out.println("Потребуется дней: 3");
-        }
-        else if (deliveryDistance > 100) {
+        } else if (deliveryDistance > 100) {
             System.out.println("Доставка не осуществляется");
         }
 
